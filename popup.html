@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.minimalthemes.net/opamo/popup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Dec 2021 13:20:19 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Opamo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" sizes="32x32">
+    <!-- Core Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Range slider -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- light box -->
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <!-- nice select -->
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <!-- main custom styles -->
+    <link rel="stylesheet" href="assets/scss/main.css">
+</head>
+<body>
+<!-- loader -->
+<div class="loader-wrapper">
+    <div class="loader">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- end loader -->
+<!-- Pop up Modal -->
+<div class="modal fade" id="myModalSubscribe" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog subscribe-modal subscribe-modal-lg" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+            </button>
+            <div class="modal-body">
+                <div class="row modal-body__row">
+                    <div class="col-md-6 modal-body__left">
+                        <div class="subscribe-modal-img" style="background-image: url('assets/images/popup-img.jpg')">
+                        </div>
+                    </div>
+                    <div class="col-md-6 modal-body__right">
+                        <div class="subscribe-modal-content">
+                            <h4 class="modal-title">Be The First To Know!</h4>
+                            <p class="modal-text">Subscribe To Newsletter</p>
+                            <form action="#" class="custom-form">
+                                <div class="form-group input-wrapper">
+                                    <input type="email" name="email" id="homeEmail" class="form-control" placeholder="Email address">
+                                    <label class="form-control-label" for="homeEmail">Email address</label>
+                                </div>
+                                <button type="submit" class="button button--dark button-block">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop up Modal -->
+<!-- header section -->
+<div class="header">
+    <!-- top header section -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 top-header__left">
+                    <div class="top-header-inner">
+                        <div class="widget widget_info">
+                            <span class="info-icon"><i class="icon-location"></i></span>
+                            <span class="info-text">4850 Trainer Avenue, Seattle</span>
+                        </div>
+                        <div class="widget widget_info">
+                            <span class="info-icon"><i class="icon-phone"></i></span>
+                            <span class="info-text">+1-800-123-456-78</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 top-header__right">
+                    <div class="top-header-inner">
+                        <div class="widget widget_info">
+                            <span class="info-icon"><i class="icon-clock"></i></span>
+                            <span class="info-text">Mon-Sun: 9:00-19:00</span>
+                        </div>
+                        <div class="widget widget_social-media">
+                            <ul class="widget-list">
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end top header section -->
+    <!-- main header section -->
+    <div class="main-header">
+        <nav class="navbar navbar-expand-lg main-navbar main-navbar--light">
+            <div class="container">
+                <!-- header logo image -->
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="assets/images/logo-dark.png" alt="">
+                </a>
+                <!-- header logo image -->
+                <!-- header action buttons -->
+                <div class="header__btn">
+                    <!-- header search box -->
+                    <div class="header-search">
+                        <a role="button" class="header-search__btn">
+                            <i class="icon-search"></i>
+                        </a>
+                        <div class="header-search__box" id="the-basics">
+                            <form>
+                                <div class="search-input">
+                                    <input type="text" class="form-control typeahead" id="search" name="search"
+                                           value=""
+                                           placeholder="Search...">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end of header search box -->
+                    <!-- header cart btn dropdown -->
+                    <a href="#" class="header__btn-dropdown" data-target="cartBtn">
+                        <i class="icon-basket"></i>
+                        <span class="btn-badge">2</span>
+                    </a>
+                    <!-- end header cart btn dropdown -->
+                    <!-- header login btn dropdown -->
+                    <a href="#" class="header__btn-dropdown" data-target="userBtn">
+                        <i class="icon-user"></i>
+                    </a>
+                    <!-- end header login btn dropdown -->
+                    <!-- dropdown buttons inner content -->
+                    <div id="actionsDropdown">
+                        <!-- dropdown cart -->
+                        <div class="dropdown-wrapper" id="cartBtn" data-collapse="false">
+                            <!-- cart items list -->
+                            <div class="cart-list">
+                                <ul class="list-no-style">
+                                    <li class="cart-list__item">
+                                        <div class="media">
+                                            <a href="#" class="product-img">
+                                                <img src="assets/images/product(13).jpg" alt="">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="#" class="product-name">Cotton floral print Dress</a>
+                                                <div class="product-price">
+                                                    <del class="old">
+                                                        <span class="amount">$95.00</span></del>
+                                                    <ins class="current ">
+                                                        <span class="amount">$70.00</span></ins>
+                                                </div>
+                                                <a href="#" class="delete-icon"><i class="fas fa-times"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cart-list__item">
+                                        <div class="media">
+                                            <a href="#" class="product-img">
+                                                <img src="assets/images/product%20(5).jpg" alt="">
+                                            </a>
+                                            <div class="media-body">
+                                                <a href="#" class="product-name">Long-sleeved Blouse</a>
+                                                <div class="product-price">
+                                                    <span class="amount">$14.25</span>
+                                                </div>
+                                                <a href="#" class="delete-icon"><i class="fas fa-times"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="dropdown-wrapper-divider"></div>
+                                <div class="dropdown-wrapper-footer">
+                                    <div class="total-price">
+                                        <span>Subtotal</span>
+                                        <span class="price">$500.00</span>
+                                    </div>
+                                    <div class="footer-btn">
+                                        <a href="#" class="button button--dark-outline">Cart</a>
+                                        <a href="#" class="button button--dark">Check out</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end cart items list -->
+                            <!-- the cart is empty -->
+                            <!--                                                        <div class="empty-cart">-->
+                            <!--                                                            <p class="text">No products in the cart</p>-->
+                            <!--                                                            <a href="shop-sidebar.html" class="button button&#45;&#45;dark button-sm">Shop Now</a>-->
+                            <!--                                                        </div>-->
+                        </div>
+                        <!-- dropdown user -->
+                        <div class="dropdown-wrapper" id="userBtn" data-collapse="false">
+                            <!-- when user is log in -->
+                            <div class="user-account-wrapper">
+                                <div class="user-info">
+                                    <div class="user-avatar">
+                                        <i class="icon-user"></i></div>
+                                    <div class="user-data">
+                                        <a href="#" class="user-name">shop@gmail.com</a>
+                                        <span class="user-meta">New York, USA</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-wrapper-divider"></div>
+                                <div class="dropdown-wrapper-footer">
+                                    <ul class="list-no-style">
+                                        <li><a href="my-account.html">My account</a></li>
+                                        <li><a href="address.html">My address</a></li>
+                                        <li><a href="orders.html">My orders</a></li>
+                                        <li><a href="change-pass.html">Change password</a></li>
+                                        <li><a href="#">Log out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- when user is logged in -->
+                            <!-- when user is logged out -->
+                            <!--                            <form class="dropdown-register_form">-->
+                            <!--                                <div class="dropdown-register_link">-->
+                            <!--                                    <span>Didn't register yet?</span>-->
+                            <!--                                    <a href="register.html">Register</a></div>-->
+                            <!--                                <h2 class="title">Log in to your account</h2>-->
+                            <!--                                <div class="custom-form">-->
+                            <!--                                    <div class="input-wrapper form-group">-->
+                            <!--                                        <input type="text" class="form-control" id="emailInput"-->
+                            <!--                                               placeholder="Email Address/User name">-->
+                            <!--                                        <label class="form-control-label">Email Address/User name</label>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="input-wrapper form-group">-->
+                            <!--                                        <div class="password-box">-->
+                            <!--                                            <input type="password" class="form-control" id="PassInput"-->
+                            <!--                                                   placeholder="Password">-->
+                            <!--                                            <label class="form-control-label">Password</label>-->
+                            <!--                                            <div class="password-box-icon">-->
+                            <!--                                            <span class="showhidepassword"><i-->
+                            <!--                                                    class="far fa-eye-slash"></i></span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="form-row custom-form_helper">-->
+                            <!--                                        <div class="col-12">-->
+                            <!--                                            <div class="forget-pass-link">-->
+                            <!--                                                <a href="forget-pass.html">Forgot your password?</a>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="custom-form_btn">-->
+                            <!--                                        <button type="submit" class="button button&#45;&#45;dark button-block">Sign in</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </form>-->
+                            <!-- when user is logged out -->
+                        </div>
+                    </div>
+                    <!-- end dropdown buttons inner content -->
+                </div>
+                <!-- navbar collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- end navbar collapse button -->
+                <!-- navbar list items -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav main-menu" id="mainMenu">
+                        <!-- simple dropdown with footer -->
+                        <li class="nav-item menu-item dropdown active">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Home
+                            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-list--md">
+                                <div class="dropdown_inner">
+                                    <ul class="list-no-style">
+                                        <li><a class="dropdown-item" href="index.html">Home Classic</a></li>
+                                        <li><a class="dropdown-item" href="index-01.html">Home Fashion</a></li>
+                                        <li><a class="dropdown-item" href="index-02.html">Home Boxed</a></li>
+                                        <li><a class="dropdown-item" href="index-03.html">Home Vertical</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown_footer">
+                                    <div class="media">
+                                        <div class="media__image">
+                                            <img src="assets/images/blog-post-13.jpg" alt="">
+                                        </div>
+                                        <div class="media__body">
+                                            <span class="text">Check what's new</span>
+                                            <a href="#" class="button button--link">
+                                                Blog posts
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- mega menu with banner -->
+                        <li class="nav-item menu-item mega-menu dropdown">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Shop
+                            </a>
+                            <div class="dropdown-menu dropdown-list mega-menu_sub-menu w-100">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-7">
+                                        <div class="dropdown_inner">
+                                            <div class="mega-menu_list">
+                                                <div class="row">
+                                                    <div class="col-lg-4 mega-menu_list-col">
+                                                        <h6 class="mega-menu_list-title">Shop Layouts</h6>
+                                                        <ul class="list-no-style">
+                                                            <li>
+                                                                <a href="shop-sidebar.html" class="dropdown-item">Sidebar Layout</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-collapse.html" class="dropdown-item">Collapse Layout</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-full.html" class="dropdown-item">Full Layout</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4 mega-menu_list-col">
+                                                        <h6 class="mega-menu_list-title">Product Layouts</h6>
+                                                        <ul class="list-no-style">
+                                                            <li>
+                                                                <a href="product-grid.html" class="dropdown-item">Grid Layout</a></li>
+                                                            <li>
+                                                                <a href="product-sticky.html" class="dropdown-item">Sticky Layout</a></li>
+                                                            <li>
+                                                                <a href="product-vertical.html" class="dropdown-item">Vertical Slider
+                                                                    Layout</a></li>
+                                                            <li>
+                                                                <a href="product-horizontal.html" class="dropdown-item">Horizontal Slider
+                                                                    Layout</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <h6 class="mega-menu_list-title">Shop pages</h6>
+                                                        <ul class="list-no-style">
+                                                            <li>
+                                                                <a href="cart.html" class="dropdown-item">Cart</a></li>
+                                                            <li>
+                                                                <a href="checkout.html" class="dropdown-item">Checkout</a></li>
+                                                            <li>
+                                                                <a href="wishlist.html" class="dropdown-item">Wishlist</a></li>
+                                                            <li>
+                                                                <a href="order-tracking.html" class="dropdown-item">Order tracking</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="mega-menu_shop-category">
+                                                <div class="categories-list">
+                                                    <div class="category_item">
+                                                        <span class="category-name">shoes</span>
+                                                        <span class="category-icon">
+                                                        <i class="icon-shoes"></i>
+                                                    </span>
+                                                    </div>
+                                                    <div class="category_item">
+                                                        <span class="category-name">Bags</span>
+                                                        <span class="category-icon">
+                                                        <i class="icon-purse"></i>
+                                                    </span>
+                                                    </div>
+                                                    <div class="category_item">
+                                                        <span class="category-name">Accessories</span>
+                                                        <span class="category-icon">
+                                                        <i class="icon-sunglasses"></i>
+                                                    </span>
+                                                    </div>
+                                                    <div class="category_item">
+                                                        <a href="#" class="category-btn">Shop All <span><i
+                                                                class="icon-arrow-right"></i> </span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="mega-menu_banner mega-menu_banner--bg mega-menu_banner--overlay"
+                                             style="background-image: url('assets/images/menu-thumb-01.jpg')">
+                                            <div class="banner-content">
+                                                <h5 class="banner-title">New collection</h5>
+                                                <a href="#" class="button button--link">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- mega menu with product cards -->
+                        <li class="nav-item menu-item mega-menu dropdown">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Store
+                            </a>
+                            <div class="dropdown-menu dropdown-list mega-menu_sub-menu w-100">
+                                <div class="dropdown_inner">
+                                    <div class="row">
+                                        <!-- mega menu list items -->
+                                        <div class="col-lg-8">
+                                            <div class="mega-menu_list">
+                                                <div class="row">
+                                                    <div class="col-md-4 mega-menu_col">
+                                                        <ul class="mega-menu_list-collapse list-no-style">
+                                                            <li class="mega-menu_item-collapse dropdown">
+                                                                <a class="dropdown-item dropdown-toggle"
+                                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                                   href="#" role="button">
+                                                                    <span>Fashion Trends</span>
+                                                                </a>
+                                                                <ul class="dropdown-menu dropdown-menu--nested">
+                                                                    <li><a class="dropdown-item" href="#">Dresses</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">Pants</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Jackets</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="#">Accessories</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Shoes</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Skirts</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">Blouses</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="mega-menu_item-collapse dropdown">
+                                                                <a class="dropdown-item dropdown-toggle"
+                                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                                   href="#" role="button">
+                                                                    <span>New Collection</span>
+                                                                </a>
+                                                                <ul class="dropdown-menu dropdown-menu--nested">
+                                                                    <li><a class="dropdown-item" href="#">Women</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Men</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Kids</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Spring/Summer
+                                                                        2020</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Instagram Shop</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">New Season Outfits</a>
+                                                            </li>
+                                                            <li class="mega-menu_item-collapse">
+                                                                <a class="dropdown-item dropdown-toggle"
+                                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                                   href="#" role="button">
+                                                                    <span>Summer Sets</span>
+                                                                </a>
+                                                                <ul class="dropdown-menu dropdown-menu--nested">
+                                                                    <li><a class="dropdown-item" href="#">Women</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Men</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Kids</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Back In Stock</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4 mega-menu_col">
+                                                        <ul class="list-no-style">
+                                                            <li><a class="dropdown-item" href="#">Jeans</a></li>
+                                                            <li><a class="dropdown-item" href="#">Cardigans &
+                                                                Sweaters</a></li>
+                                                            <li><a class="dropdown-item" href="#">Swimwear</a></li>
+                                                            <li><a class="dropdown-item" href="#">Jumpsuits &
+                                                                Rompers</a></li>
+                                                            <li><a class="dropdown-item" href="#">Shirts & Blouses</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Hoodies &
+                                                                Sweatshirts</a></li>
+                                                            <li><a class="dropdown-item" href="#">Sleepwear &
+                                                                Loungewear</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4 mega-menu_col">
+                                                        <ul class="list-no-style">
+                                                            <li><a class="dropdown-item" href="#">Casual</a></li>
+                                                            <li><a class="dropdown-item" href="#">Basics<span
+                                                                    class="badge badge--danger">Hot</span></a></li>
+                                                            <li><a class="dropdown-item" href="#">Business</a></li>
+                                                            <li><a class="dropdown-item" href="#">Party</a></li>
+                                                            <li><a class="dropdown-item" href="#">Denim<span
+                                                                    class="badge badge--primary">On Sale</span></a></li>
+                                                            <li><a class="dropdown-item" href="#">Sports</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- mega menu banner -->
+                                        <div class="col-lg-4">
+                                            <div class="mega-menu_banner">
+                                                <div class="img-hover-1">
+                                                    <a href="#"><img src="assets/images/banner-05.jpg" alt=""></a>
+                                                </div>
+                                                <div class="banner-content">
+                                                    <h5 class="banner-title">Men's Wear</h5>
+                                                    <a href="#" class="button button--link">Shop Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- mega menu with product cards -->
+                        <li class="nav-item menu-item mega-menu dropdown">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu dropdown-list mega-menu_sub-menu w-100">
+                                <div class="dropdown_inner">
+                                    <div class="row">
+                                        <!-- mega menu list items -->
+                                        <div class="col-lg-3">
+                                            <div class="mega-menu_list">
+                                                <h6 class="mega-menu_list-title">Pages</h6>
+                                                <ul class="list-no-style">
+                                                    <li><a class="dropdown-item" href="about.html">About us</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="contact-01.html">Contact
+                                                        Us Demo1</a></li>
+                                                    <li><a class="dropdown-item" href="contact-02.html">Contact
+                                                        Us Demo2</a></li>
+                                                    <li><a class="dropdown-item" href="pricing.html">Pricing</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="popup.html">Popup</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                                    <li><a class="dropdown-item" href="404.html">404</a></li>
+                                                    <li><a class="dropdown-item" href="coming-soon.html">Coming
+                                                        soon</a></li>
+                                                    <li><a class="dropdown-item" href="register.html">Sign
+                                                        up/Sign in</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- mega menu product cards -->
+                                        <div class="col-lg-9 mega-menu_banner">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="product-card">
+                                                        <div class="product-card__img img-hover-1">
+                                                            <a href="#">
+                                                                <img src="assets/images/product(14).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-card__body card-body--flex">
+                                                            <h3 class="product-name">
+                                                                <a href="#">Perfume</a>
+                                                            </h3>
+                                                            <div class="product-price">
+                                                                <span class="amount">$280.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="product-card">
+                                                        <div class="product-card__img img-hover-1">
+                                                            <a href="#">
+                                                                <img src="assets/images/product(26).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-card__body card-body--flex">
+                                                            <h3 class="product-name">
+                                                                <a href="#">Gray suit</a>
+                                                            </h3>
+                                                            <div class="product-price">
+                                                                <span class="amount">$456.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="product-card">
+                                                        <div class="product-card__img img-hover-1">
+                                                            <a href="#">
+                                                                <img src="assets/images/product%20(9).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-card__body card-body--flex">
+                                                            <h3 class="product-name">
+                                                                <a href="#">Party dress</a>
+                                                            </h3>
+                                                            <div class="product-price">
+                                                                <span class="amount">$120.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="product-card">
+                                                        <div class="product-card__img img-hover-1">
+                                                            <a href="#">
+                                                                <img src="assets/images/product%20(12).jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-card__body card-body--flex">
+                                                            <h3 class="product-name">
+                                                                <a href="#">Sandals</a>
+                                                            </h3>
+                                                            <div class="product-price">
+                                                                <span class="amount">$100.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- dropdown with sub dropdown -->
+                        <li class="nav-item menu-item dropdown">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Blog
+                            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-list--br dropdown-list--md">
+                                <div class="dropdown_inner">
+                                    <ul class="list-no-style">
+                                        <li class="dropdown sub-menu-dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Blog
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-list dropdown-list--br sub-menu-dropdown_right">
+                                                <li><a class="dropdown-item" href="blog-left-sidebar.html">Blog left
+                                                    sidebar</a></li>
+                                                <li><a class="dropdown-item" href="blog-right-sidebar.html">Blog right
+                                                    sidebar</a></li>
+                                                <li><a class="dropdown-item" href="blog-lists.html">Blog list</a></li>
+                                                <li><a class="dropdown-item" href="blog-grid.html">Blog grid</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown sub-menu-dropdown">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Blog
+                                                post
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-list dropdown-list--br sub-menu-dropdown_right">
+                                                <li><a class="dropdown-item" href="blog-post-left-sidebar.html">Blog
+                                                    post
+                                                    left sidebar</a></li>
+                                                <li><a class="dropdown-item" href="blog-post-right-sidebar.html">Blog
+                                                    post
+                                                    right sidebar</a></li>
+                                                <li><a class="dropdown-item" href="blog-post-full.html">Blog post
+                                                    full</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="blog-post-slider.html">Blog post
+                                                    Slider</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="blog-post-video.html">Blog post
+                                                    Video</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- simple link -->
+                        <li class="nav-item menu-item">
+                            <a class="nav-link menu-item_link" href="about.html">
+                                About us
+                            </a>
+                        </li>
+                        <!-- simple dropdown -->
+                        <li class="nav-item menu-item dropdown">
+                            <a class="nav-link menu-item_link dropdown-toggle" href="#"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contact us
+                            </a>
+                            <div class="dropdown-menu dropdown-list dropdown-list--br">
+                                <div class="dropdown_inner">
+                                    <ul class="list-no-style">
+                                        <li><a class="dropdown-item" href="contact-01.html">Contact Demo 01</a></li>
+                                        <li><a class="dropdown-item" href="contact-02.html">Contact Demo 02</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end navbar list items -->
+            </div>
+        </nav>
+    </div>
+    <!-- end main header section -->
+</div>
+<!-- end header section -->
+<!-- breadcrumb section -->
+<div class="custom-breadcrumb custom-breadcrumb--minimal">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Women's shoes</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sneakers</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+<!-- main content section -->
+<div class="main-content pb-150">
+    <!-- single product section -->
+    <div class="container">
+        <div class="product-layout-grid">
+            <div class="row">
+                <!-- product gallery section -->
+                <div class="col-lg-7">
+                    <div class="product-images">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="product-images-grid">
+                                    <a href="assets/images/product-01.jpg"
+                                       data-toggle="lightbox" data-gallery="product-gallery">
+                                        <img src="assets/images/product-01.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-images-grid">
+                                    <a href="assets/images/product-04.jpg"
+                                       data-toggle="lightbox" data-gallery="product-gallery">
+                                        <img src="assets/images/product-04.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-images-grid">
+                                    <a href="assets/images/product-06.jpg"
+                                       data-toggle="lightbox" data-gallery="product-gallery">
+                                        <img src="assets/images/product-06.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-images-grid">
+                                    <a href="assets/images/product-08.jpg"
+                                       data-toggle="lightbox" data-gallery="product-gallery">
+                                        <img src="assets/images/product-08.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end product gallery section -->
+                <!-- product summery section -->
+                <div class="col-lg-5">
+                    <div class="product-wrapper product-wrapper--sticky">
+                        <form>
+                            <div class="product-header">
+                                <div class="product-rate">
+                                    <div class="review-rate">
+                                        <div class="rate-stars">
+                                            <span class="rate-4"></span>
+                                        </div>
+                                        <div class="rate-number">
+                                            (Reviews 9)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-category">
+                                    Shoes
+                                </div>
+                                <h2 class="product-title">LV ARCHLIGHT SNEAKER</h2>
+                            </div>
+                            <div class="product-price">
+                                <del class="old">
+                                    <span class="amount">$45.00</span></del>
+                                <ins class="current">
+                                    <span class="amount">$35.00</span></ins>
+                            </div>
+                            <div class="product-color">
+                                <h6 class="title">Colors:</h6>
+                                <input type="hidden" name="product-color" id="colorInput" value="">
+                                <ul class="color-list">
+                                    <li>
+                                        <a role="button" class="color_item" style="background-color: #ffffff"
+                                           data-value="white"></a>
+                                    </li>
+                                    <li>
+                                        <a role="button" class="color_item" style="background-color: #FF4343"
+                                           data-value="red"></a>
+                                    </li>
+                                    <li>
+                                        <a role="button" class="color_item" style="background-color: #4571D9"
+                                           data-value="blue"></a>
+                                    </li>
+                                    <li>
+                                        <a role="button" class="color_item" style="background-color: #000000"
+                                           data-value="black"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-size">
+                                <h6 class="title">Size:</h6>
+                                <button class="button button--secondary-outline size-select-btn" type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseSize" aria-expanded="false"
+                                        aria-controls="collapseSize">
+                                    Choose size
+                                </button>
+                                <input type="hidden" name="product-size" id="sizeInput" value="">
+                                <div class="collapse expand-on-lg" id="collapseSize">
+                                    <ul class="size-list">
+                                        <li>
+                                            <a role="button" class="size_item" data-value="xxs">XXS</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item" data-value="xs">XS</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item" data-value="s">S</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item" data-value="m">M</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item" data-value="l">L</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item out-of-stock" data-value="xl">XL</a>
+                                        </li>
+                                        <li>
+                                            <a role="button" class="size_item out-of-stock" data-value="xxl">XXL</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-add-to-cart">
+                                <div class="product-quantity">
+                                    <div class="quantity-input">
+                                        <span class="quantity__minus"><i class="fas fa-minus"></i></span>
+                                        <input class="quantity__input" type="text" value="1"/>
+                                        <span class="quantity__plus"><i class="fas fa-plus"></i></span>
+                                    </div>
+                                </div>
+                                <button type="submit" name="add-to-cart" value="48"
+                                        class="add-to-header-cart button button--dark button-md">Add to cart
+                                </button>
+                            </div>
+                        </form>
+                        <div class="product-wishlist">
+                            <a href="#" class="button button--light button-md">Wishlist
+                                <i class="icon-heart"></i> </a>
+                        </div>
+                        <div class="product-share">
+                            <span class="title">Share:</span>
+                            <ul class="inline-list">
+                                <li>
+                                    <a href="#" class="social-media_item"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-media_item"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-media_item"><i class="fab fa-pinterest-p"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end product summery section -->
+            </div>
+        </div>
+        <!-- product information section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="product-info pt-60">
+                    <ul class="nav nav-pills product-info__nav nav--minimal" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-description-tab" data-toggle="pill"
+                               href="#pills-description"
+                               role="tab" aria-controls="pills-description"
+                               aria-selected="true">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-size-tab" data-toggle="pill" href="#pills-size"
+                               role="tab" aria-controls="pills-size" aria-selected="false">Size Guid</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review"
+                               role="tab" aria-controls="pills-review" aria-selected="false">Review</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- product information description -->
+                        <div class="tab-pane fade" id="pills-description" role="tabpanel"
+                             aria-labelledby="pills-description-tab">
+                            <div class="product-des">
+                                <p>Lorem ipsum dolor sit amet, sale nemore equidem duo ad, et qui rebum aeque. In
+                                    quo
+                                    possit omnium delectus, vis latine partiendo dignissim ne. Pri at suscipiantur
+                                    interpretaris, eu tamquam suscipit eum, agam facete expetendis ut eam. Nisl sumo
+                                    iuvaret eam ei. Pro mazim debitis pertinax an.
+                                </p>
+                                <p>
+                                    Eu vis singulis elaboraret, dicta salutatus eum ne. Velit honestatis sed et, partem
+                                    euismod his ei, vel ex decore expetendis. In mea prima alterum accumsan, eu quo
+                                    option constituam scripserit, mel alia probo contentiones no. Vide noluisse sit cu,
+                                    odio alterum pri et.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- product information size guid -->
+                        <div class="tab-pane fade show active" id="pills-size" role="tabpanel"
+                             aria-labelledby="pills-size-tab">
+                            <!-- size cart clothes -->
+                            <div class="size-guid-table">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="dynamic-size-table" data-unit="CM">
+                                            <div class="table-caption">
+                                                <div class="table-title">Clothing</div>
+                                                <div class="table-metrics">
+                                                    <div class="custom-radio_btn">
+                                                        <input type="radio" id="customRadio1" name="unitClothe"
+                                                               value="IN"
+                                                               class="custom-radio-input unit_change_handler">
+                                                        <label class="custom-radio-label"
+                                                               for="customRadio1">IN</label>
+                                                    </div>
+                                                    <div class="custom-radio_btn">
+                                                        <input type="radio" id="customRadio2" name="unitClothe"
+                                                               value="CM"
+                                                               class="custom-radio-input unit_change_handler" checked>
+                                                        <label class="custom-radio-label"
+                                                               for="customRadio2">CM</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <table class="table table--bordered">
+                                                <thead class="table__head">
+                                                <tr>
+                                                    <th scope="col">EUR</th>
+                                                    <th scope="col">US</th>
+                                                    <th scope="col">Bust</th>
+                                                    <th scope="col">Waist</th>
+                                                    <th scope="col">Hips</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="table__body">
+                                                <tr>
+                                                    <td>XS</td>
+                                                    <td>2</td>
+                                                    <td class="value">32</td>
+                                                    <td class="value">24-25</td>
+                                                    <td class="value">33-34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>S</td>
+                                                    <td>4</td>
+                                                    <td class="value">34-35</td>
+                                                    <td class="value">26-27</td>
+                                                    <td class="value">35-36</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>M</td>
+                                                    <td>6</td>
+                                                    <td class="value">36-37</td>
+                                                    <td class="value">28-29</td>
+                                                    <td class="value">37-38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>L</td>
+                                                    <td>8</td>
+                                                    <td class="value">38-39</td>
+                                                    <td class="value">30-31</td>
+                                                    <td class="value">39-40</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XL</td>
+                                                    <td>10</td>
+                                                    <td class="value">40-41</td>
+                                                    <td class="value">32-33</td>
+                                                    <td class="value">41-42</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XXL</td>
+                                                    <td>12</td>
+                                                    <td class="value">42-43</td>
+                                                    <td class="value">34-35</td>
+                                                    <td class="value">43-44</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- size cart shoes -->
+                            <div class="size-guid-table">
+                                <div class="dynamic-size-table" data-unit="CM">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-caption">
+                                                <div class="table-title">Shoes</div>
+                                                <div class="table-metrics">
+                                                    <div class="custom-radio_btn">
+                                                        <input type="radio" id="customRadio3" name="unitShoes"
+                                                               value="IN"
+                                                               class="custom-radio-input unit_change_handler">
+                                                        <label class="custom-radio-label"
+                                                               for="customRadio3">IN</label>
+                                                    </div>
+                                                    <div class="custom-radio_btn">
+                                                        <input type="radio" id="customRadio4" name="unitShoes"
+                                                               value="CM"
+                                                               class="custom-radio-input unit_change_handler"
+                                                               checked>
+                                                        <label class="custom-radio-label"
+                                                               for="customRadio4">CM</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table table--bordered">
+                                                <thead class="table__head">
+                                                <tr>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">US</th>
+                                                    <th scope="col">Foot length</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="table__body">
+                                                <tr>
+                                                    <td>36</td>
+                                                    <td>5</td>
+                                                    <td class="value">22.8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>36.5</td>
+                                                    <td>5.5</td>
+                                                    <td class="value">23.1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>37</td>
+                                                    <td>6</td>
+                                                    <td class="value">23.5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>37.5</td>
+                                                    <td>6.5</td>
+                                                    <td class="value">24.5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>38</td>
+                                                    <td>7</td>
+                                                    <td class="value">25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>38.5</td>
+                                                    <td>7.5</td>
+                                                    <td class="value">25.5</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table table--bordered">
+                                                <thead class="table__head">
+                                                <tr>
+                                                    <th scope="col">Size</th>
+                                                    <th scope="col">US</th>
+                                                    <th scope="col">Foot length</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="table__body">
+                                                <tr>
+                                                    <td>39</td>
+                                                    <td>8</td>
+                                                    <td class="value">26</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>39.5</td>
+                                                    <td>8.5</td>
+                                                    <td class="value">26.5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>40</td>
+                                                    <td>8.5</td>
+                                                    <td class="value">27</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>40.5</td>
+                                                    <td>9</td>
+                                                    <td class="value">27</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>41</td>
+                                                    <td>10</td>
+                                                    <td class="value">28</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product information reviews -->
+                        <div class="tab-pane fade" id="pills-review" role="tabpanel"
+                             aria-labelledby="pills-review-tab">
+                            <div class="product-review-form">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-lg-6 col-md-12 col-sm-6 form-group">
+                                            <label for="inputName">Name</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-6 form-group">
+                                            <label for="inputEmail">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail">
+                                        </div>
+                                        <div class="col-12 form-group">
+                                                    <textarea class="form-control" id="textarea" rows="4"
+                                                              placeholder="Review"></textarea>
+                                        </div>
+                                        <div class="col-lg-9 col-md-7 col-sm-7">
+                                            <div class="rating-wrapper">
+                                                <span>Your rating</span>
+                                                <ul class="inline-list">
+                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                    <li><a href="#"><i class="icon-star"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-5 col-sm-5">
+                                            <button type="submit" class="button button--dark review-form_btn">
+                                                Send
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="comments-list">
+                                <ul class="media-list">
+                                    <li class="media-item">
+                                        <div class="media-item__body">
+                                            <div class="user-avatar">
+                                                <img src="assets/images/profile-01.jpg" alt="">
+                                            </div>
+                                            <div class="media-inner">
+                                                <div class="header">
+                                                    <div class="review-rate">
+                                                        <div class="rate-stars">
+                                                            <span class="rate-4"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-name">
+                                                        <h6>Sara Smith</h6>
+                                                    </div>
+                                                    <div class="reply-link">
+                                                        <span>Reply</span>
+                                                        <i class="fa fa-redo"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Corporis
+                                                        dolore expedita laboriosam maiores nesciunt nihil
+                                                        perspiciatis
+                                                        reprehenderit vitae? Animi doloribus hic id ipsum
+                                                        labore,
+                                                        nobis
+                                                        optio quae repellendus rerum voluptates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-item__footer">
+                                            <div class="comments-likes">
+                                                <span>Was it helpful?</span>
+                                                <button class="btn-like comment-like">Yes 13</button>
+                                                <button class="btn-like comment-dislike">No 2</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="media-item">
+                                        <div class="media-item__body">
+                                            <div class="user-avatar">
+                                                <img src="assets/images/profile-02.jpg" alt="">
+                                            </div>
+                                            <div class="media-inner">
+                                                <div class="header">
+                                                    <div class="review-rate">
+                                                        <div class="rate-stars">
+                                                            <span class="rate-4"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-name">
+                                                        <h6>Sara Smith</h6>
+                                                    </div>
+                                                    <div class="reply-link">
+                                                        <span>Reply</span>
+                                                        <i class="fa fa-redo"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Corporis
+                                                        dolore expedita laboriosam maiores nesciunt nihil
+                                                        perspiciatis
+                                                        reprehenderit vitae? Animi doloribus hic id ipsum
+                                                        labore,
+                                                        nobis
+                                                        optio quae repellendus rerum voluptates.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media-item__footer">
+                                            <div class="comments-likes">
+                                                <span>Was it helpful?</span>
+                                                <button class="btn-like comment-like">Yes 13</button>
+                                                <button class="btn-like comment-dislike">No 2</button>
+                                            </div>
+                                        </div>
+                                        <div class="media-item--nested">
+                                            <div class="media-item__body">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/profile-03.jpg" alt="">
+                                                </div>
+                                                <div class="media-inner">
+                                                    <div class="header">
+                                                        <div class="review-rate">
+                                                            <div class="rate-stars">
+                                                                <span class="rate-4"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-name">
+                                                            <h6>Sara Smith</h6>
+                                                        </div>
+                                                        <div class="reply-link">
+                                                            <span>Reply</span>
+                                                            <i class="fa fa-redo"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                            elit.
+                                                            Corporis
+                                                            dolore expedita laboriosam maiores nesciunt nihil
+                                                            perspiciatis
+                                                            reprehenderit vitae? Animi doloribus hic id ipsum
+                                                            labore,
+                                                            nobis
+                                                            optio quae repellendus rerum voluptates.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-item__footer">
+                                                <div class="comments-likes">
+                                                    <span>Was it helpful?</span>
+                                                    <button class="btn-like comment-like">Yes 13</button>
+                                                    <button class="btn-like comment-dislike">No 2
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end product information section -->
+        <!-- related product section -->
+        <div class="related-products-area pt-150">
+            <!-- main title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+                        <h2 class="main-heading">You may also like</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- end main title -->
+            <!-- products cards -->
+            <div class="row">
+                <div class="col-lg col-sm-6">
+                    <div class="product-card product-card--block">
+                        <div class="product-card__img">
+                            <a href="#">
+                                <img src="assets/images/product%20(1).jpg" alt="">
+                            </a>
+                            <div class="product-card__overlay">
+                                <div class="product-badge">
+                                    -20%
+                                </div>
+                                <div class="product-actions">
+                                    <ul class="product-btn-list">
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-eye"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-basket"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-category">Shirt</div>
+                            <h3 class="product-name">
+                                <a href="#">Cotton floral print Dress</a>
+                            </h3>
+                            <div class="product-price">
+                                <del class="old">
+                                    <span class="amount">$45.00</span></del>
+                                <ins class="current">
+                                    <span class="amount">$35.00</span></ins>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6">
+                    <div class="product-card product-card--block">
+                        <div class="product-card__img">
+                            <a href="#">
+                                <img src="assets/images/product%20(2).jpg" alt="">
+                            </a>
+                            <div class="product-card__overlay">
+                                <div class="product-actions">
+                                    <ul class="product-btn-list">
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-eye"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-basket"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-category">Pants</div>
+                            <h3 class="product-name">
+                                <a href="#">Black cotton skinny jean</a>
+                            </h3>
+                            <div class="product-price">
+                                <span class="amount">$25.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6">
+                    <div class="product-card product-card--block">
+                        <div class="product-card__img">
+                            <a href="#">
+                                <img src="assets/images/product%20(3).jpg" alt="">
+                            </a>
+                            <div class="product-card__overlay">
+                                <div class="product-actions">
+                                    <ul class="product-btn-list">
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-eye"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-basket"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-category">Shirt</div>
+                            <h3 class="product-name">
+                                <a href="#">Denim shirt</a>
+                            </h3>
+                            <div class="product-price">
+                                <span class="amount">$25.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6">
+                    <div class="product-card product-card--block">
+                        <div class="product-card__img">
+                            <a href="#">
+                                <img src="assets/images/product%20(4).jpg" alt="">
+                            </a>
+                            <div class="product-card__overlay">
+                                <div class="product-badge">
+                                    -50%
+                                </div>
+                                <div class="product-actions">
+                                    <ul class="product-btn-list">
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-eye"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-basket"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-category">Pants</div>
+                            <h3 class="product-name">
+                                <a href="#">Paper-bag Pants</a>
+                            </h3>
+                            <div class="product-price">
+                                <del class="old">
+                                    <span class="amount">$50.00</span></del>
+                                <ins class="current">
+                                    <span class="amount">$25.00</span></ins>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6">
+                    <div class="product-card product-card--block">
+                        <div class="product-card__img">
+                            <a href="#">
+                                <img src="assets/images/product%20(5).jpg" alt="">
+                            </a>
+                            <div class="product-card__overlay">
+                                <div class="product-actions">
+                                    <ul class="product-btn-list">
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-eye"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-basket"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="product-btn"><i class="icon-heart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__body">
+                            <div class="product-category">Blouses</div>
+                            <h3 class="product-name">
+                                <a href="#">Long-sleeved Blouse</a>
+                            </h3>
+                            <div class="product-price">
+                                <span class="amount">$14.25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end products cards -->
+        </div>
+        <!-- end related product section -->
+    </div>
+    <!-- end single product section -->
+</div>
+<!-- end main content section -->
+<!-- footer section -->
+<footer>
+    <div class="footer">
+        <div class="footer-top-row">
+            <div class="container">
+                <div class="row">
+                    <!-- footer logo section -->
+                    <div class="col-lg-3 col-md-12 footer-col">
+                        <div class="widget widget_logo">
+                            <img src="assets/images/logo-light.png" alt="">
+                        </div>
+                    </div>
+                    <!-- footer contact information section -->
+                    <div class="col-lg-3 col-md-4 footer-col">
+                        <div class="widget widget_contact">
+                            <div class="info-wrapper">
+                                <span class="icon"><i class="icon-location"></i></span>
+                                <div class="content">
+                                    <h6>Address:</h6>
+                                    <p>4850 Trainer Avenue, Seattle, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 footer-col">
+                        <div class="widget widget_contact">
+                            <div class="info-wrapper">
+                                <span class="icon"><i class="icon-phone"></i></span>
+                                <div class="content">
+                                    <h6>Phone:</h6>
+                                    <p>+1-800-123-456-78</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 footer-col">
+                        <div class="widget widget_contact">
+                            <div class="info-wrapper">
+                                <span class="icon"><i class="icon-envelope"></i></span>
+                                <div class="content">
+                                    <h6>Email:</h6>
+                                    <p>opamo@info.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="row">
+                    <!-- footer about section -->
+                    <div class="col-lg-3 col-md-6 footer-col">
+                        <div class="widget widget_about">
+                            <h3 class="widget-title">About us</h3>
+                            <div class="widget-desc">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eum illo itaque
+                                    mollitia
+                                    officiis
+                                    pariatur perspiciatis sed temporibus ullam, voluptatibus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="widget widget_social-media">
+                            <ul class="widget-list">
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- footer shop links section -->
+                    <div class="col-lg-3 col-md-6 footer-col">
+                        <div class="widget widget_shop-links">
+                            <h3 class="widget-title">Shop</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list_item">
+                                    <a href="#">Men's shopping</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Women's shopping</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">kid's shopping</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- footer company short links section -->
+                    <div class="col-lg-3 col-md-6 footer-col">
+                        <div class="widget widget_short-links">
+                            <h3 class="widget-title">Company</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list_item">
+                                    <a href="#">Our story</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Stores</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Work with us</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Terms of use</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- footer help links section -->
+                    <div class="col-lg-3 col-md-6 footer-col">
+                        <div class="widget widget_help">
+                            <h3 class="widget-title">Help</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list_item">
+                                    <a href="#">Gift card</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Payment</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Exchanges and returns</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">My account</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Customer Service</a>
+                                </li>
+                                <li class="widget-list_item">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-row">
+            <div class="container">
+                <div class="footer-divider"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="widget widget_copyright">
+                            <p>© All rights reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="widget widget_payment">
+                            <img src="assets/images/payment-methods.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer section -->
+<!-- back to top btn -->
+<a class="back-to-top-btn" id="backToTop"></a>
+<!-- end back to top btn -->
+<!-- Theme js files -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- range slider js -->
+<script src="assets/js/ion.rangeSlider.min.js"></script>
+<!-- nice select -->
+<script src="assets/js/nice-select.min.js"></script>
+<!-- countdown -->
+<script src="assets/js/countdown.jquery.min.js"></script>
+<!-- light box -->
+<script src="assets/js/lightbox.min.js"></script>
+<!-- theme js -->
+<script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from demo.minimalthemes.net/opamo/popup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Dec 2021 13:20:21 GMT -->
+</html>
